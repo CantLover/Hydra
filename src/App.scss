@@ -1,0 +1,148 @@
+.App {
+	@apply w-full min-h-screen bg-[#302C42] flex justify-center font-[Montserrat];
+	.text {
+		@apply text-base text-white;
+	}
+	.text12 {
+		@apply text-xs text-white;
+	}
+	.text14 {
+		@apply text-sm text-white;
+	}
+	button {
+		@apply rounded-[40px] text-[#343045] bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] uppercase font-bold;
+	}
+	h3 {
+		@apply font-bold text-2xl text-white mb-[10px];
+	}
+	.appWrapper {
+		@apply w-[1440px] px-[84px] py-[50px];
+
+		header {
+			@apply flex font-bold text-xs text-white uppercase mb-24;
+			.logo {
+				@apply flex items-center mr-[205px];
+				.logoImg {
+					@apply w-[105px] h-[105px] mr-[15px];
+				}
+				.logoText {
+					@apply w-[76px] h-[46px];
+				}
+			}
+			.headerNav {
+				@apply flex items-center justify-around mr-[140px];
+				a {
+					@apply mr-[42px] last:mr-0;
+				}
+			}
+			.buttons {
+				@apply flex items-center;
+				button {
+					@apply first:mr-[38px] px-[34px] py-[17px] first:border-2 first:text-white first:bg-none;
+				}
+			}
+		}
+
+		main {
+			.home {
+				@apply flex relative;
+				.vector1 {
+					@apply absolute top-[20px] left-[-80px];
+				}
+				.vector2 {
+					@apply absolute right-8 top-[-250px];
+				}
+				.vector3 {
+					@apply absolute right-[-80px] top-[-80px];
+				}
+				.vector4 {
+					@apply absolute right-[-80px] top-[145px];
+				}
+				.leftSide {
+					@apply w-1/2 pt-11;
+					h1 {
+						@apply font-bold text-[40px] w-[456px] leading-[57px] text-white mb-[36px];
+						.spanFirst {
+							@apply font-bold text-[46px];
+							background-image: linear-gradient(90deg, #c0b7e8, #8176af);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
+						.spanSecond {
+							@apply font-bold text-[46px];
+							background-image: linear-gradient(90deg, #8176af, #c0b7e8);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
+					}
+					p {
+						@apply w-[450px] leading-7 font-normal mb-[66px];
+					}
+					.buttonArrow {
+						@apply flex items-center;
+						.homeButton {
+							@apply py-[17px] px-[40px] text-xs mr-10;
+						}
+						img {
+							@apply w-[42px] h-[33px];
+						}
+					}
+				}
+				.rightSide {
+					@apply w-1/2 flex justify-end mr-[15px] mb-[100px] z-20;
+					img {
+						@apply w-[490px] h-[426px] border-[15px] border-black/10 rounded-[100px] rounded-bl-[200px] shadow;
+					}
+				}
+			}
+			.homeContacts {
+				@apply w-[1272px] h-[167px] rounded-[100px] py-[25px] px-10 flex justify-center items-center shadow z-20 absolute mb-[90px];
+				background: linear-gradient(
+					to right,
+					#211e2e,
+					rgb(58, 52, 86),
+					#211e2e
+				);
+				.locationImage {
+					@apply w-[70px] h-[70px];
+				}
+				.callImage {
+					@apply w-[59px] h-[59px] mr-[29px];
+				}
+				.mailImage {
+					@apply w-[65px] h-[65px] mr-[23px];
+				}
+				.verticalLine {
+					@apply mr-[50px];
+				}
+				.visit {
+					@apply w-[400px] mr-[42.5px];
+				}
+				.call {
+					@apply w-[370px];
+				}
+				.message {
+					@apply w-[420px];
+				}
+			}
+
+			.about {
+			}
+
+			.services {
+			}
+
+			.technologies {
+			}
+
+			.howTo {
+			}
+
+			.join {
+			}
+		}
+
+		footer {
+		}
+	}
+}
