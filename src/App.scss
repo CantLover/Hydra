@@ -1,16 +1,22 @@
 .App {
 	@apply w-full min-h-screen bg-[#302C42] flex justify-center font-[Montserrat];
+	.firstH2 {
+		@apply text-white font-bold text-4xl leading-[43.8px] mb-[10px];
+	}
+	.secondH2 {
+		@apply text-white font-light text-4xl leading-[43.8px];
+	}
 	.text {
-		@apply text-base text-white;
+		@apply text-base text-white leading-[28px];
 	}
 	.text12 {
-		@apply text-xs text-white;
+		@apply text-xs text-white leading-5;
 	}
 	.text14 {
 		@apply text-sm text-white;
 	}
 	button {
-		@apply rounded-[40px] text-[#343045] bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] uppercase font-bold;
+		@apply rounded-[40px] text-[#343045] bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] uppercase font-bold text-xs;
 	}
 	h3 {
 		@apply font-bold text-2xl text-white mb-[10px];
@@ -44,6 +50,7 @@
 		}
 
 		main {
+			@apply relative;
 			.home {
 				@apply flex relative;
 				.vector1 {
@@ -81,7 +88,7 @@
 					.buttonArrow {
 						@apply flex items-center;
 						.homeButton {
-							@apply py-[17px] px-[40px] text-xs mr-10;
+							@apply py-[17px] px-[40px] mr-10;
 						}
 						img {
 							@apply w-[42px] h-[33px];
@@ -96,7 +103,7 @@
 				}
 			}
 			.homeContacts {
-				@apply w-[1272px] h-[167px] rounded-[100px] py-[25px] px-10 flex justify-center items-center shadow z-20 absolute mb-[90px];
+				@apply w-[1272px] h-[167px] rounded-[100px] py-[25px] flex pl-[39px] items-center shadow z-20 absolute;
 				background: linear-gradient(
 					to right,
 					#211e2e,
@@ -110,29 +117,136 @@
 					@apply w-[59px] h-[59px] mr-[29px];
 				}
 				.mailImage {
-					@apply w-[65px] h-[65px] mr-[23px];
+					@apply w-[65px] h-[65px] ml-[2.5px] mr-[23px];
 				}
 				.verticalLine {
-					@apply mr-[50px];
+					@apply mr-[47.5px];
 				}
 				.visit {
-					@apply w-[400px] mr-[42.5px];
+					@apply w-[332px];
 				}
 				.call {
-					@apply w-[370px];
+					@apply w-[235px];
 				}
 				.message {
-					@apply w-[420px];
 				}
 			}
-
+			.aboutServicesArrow {
+				@apply absolute right-[130px] bottom-[-15px];
+			}
 			.about {
+				@apply grid grid-cols-2 mt-[257px] mb-[100px] relative;
+
+				.aboutVector1 {
+					@apply absolute top-[250px] scale-110;
+				}
+				.aboutVector2 {
+					@apply absolute top-[540px] scale-110;
+				}
+
+				.firstTitle {
+					@apply relative;
+				}
+				.firstDiscription {
+					@apply w-[650px] ml-[-22px];
+				}
+
+				.aboutImage {
+					@apply h-[557px] mt-[100px] z-20;
+					img {
+						@apply w-[524px] h-[557px] rounded-tr-[100px] rounded-bl-[100px] rounded-br-[200px] rounded-tl-[200px];
+					}
+				}
+				.imageDiscription {
+					@apply flex justify-center flex-col mt-[100px];
+					.imageDiscriptionWrapper {
+						.secondH2 {
+							@apply mb-[42px];
+						}
+						p {
+							@apply mb-[28px];
+						}
+					}
+					button {
+						@apply w-[214px] h-[48px];
+					}
+				}
 			}
 
 			.services {
+				@apply relative;
+				.servicesTitleDiscription {
+					@apply flex mt-[111px] mb-[102px];
+					.servicesTitle {
+						@apply relative w-1/2;
+					}
+					.servicesDiscription {
+						@apply w-[650px] ml-[-22px];
+					}
+				}
+				.servicesVector {
+					@apply absolute top-[360px] scale-110;
+				}
+				.servicesList {
+					@apply flex mb-[114px];
+					.servicesItem {
+						background: radial-gradient(#433d60, 40%, #211e2e);
+						@apply z-20 rounded-[40px] flex flex-col justify-center mr-[11px] last:mr-0 pt-[23px] pb-[40px] px-[25px];
+						.itemIcon {
+							@apply mb-[21px] rounded-full border-[#0E0E0E]/30 border-[14px] shadow-[#433d60]/30 shadow-xl;
+						}
+						.itemHeader {
+							@apply mb-[17.5px] uppercase text-center;
+						}
+						.horizontalLine {
+							@apply mb-[21.5px] w-[154px] ml-[53.5px];
+						}
+						p {
+							@apply mb-[35px];
+						}
+						button {
+							@apply px-[39px] pt-[16px] pb-[17px] w-[154px] h-[48px] ml-[53px];
+						}
+					}
+				}
 			}
 
 			.technologies {
+				@apply relative pb-[15px];
+				.techHead {
+					background-image: url(./images/technologies/techBg.png);
+					@apply z-20 w-[1278px] h-[303px] rounded-[200px] bg-black flex flex-col items-center pt-[108px] mb-[60px];
+					.firstH2 {
+						@apply mb-[11px];
+					}
+					.secondH2 {
+						@apply mb-[46px];
+					}
+					button {
+						@apply p-[5px]  bg-clip-padding border-[#0E0E0E]/30 border-[15px] rounded-full;
+						img {
+							@apply w-[60px];
+						}
+					}
+				}
+				.techCompaniesList {
+					@apply flex items-center;
+					.techCompaniesItem {
+						img {
+						}
+						.unreal {
+							@apply ml-[69px] mr-[91px];
+						}
+						.unity {
+							@apply mr-[71px];
+						}
+						.oculus {
+							@apply mr-[56px];
+						}
+						.vive {
+						}
+					}
+				}
 			}
 
 			.howTo {
