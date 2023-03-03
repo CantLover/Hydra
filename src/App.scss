@@ -15,8 +15,12 @@
 	.text14 {
 		@apply text-sm text-white;
 	}
+
 	button {
-		@apply rounded-[40px] text-[#343045] bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] uppercase font-bold text-xs;
+		@apply rounded-[40px] text-[#343045] bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] uppercase font-bold text-xs bg-clip-padding;
+	}
+	input.button {
+		@apply rounded-[40px] text-[#343045] bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] uppercase font-bold text-xs bg-clip-padding;
 	}
 	h3 {
 		@apply font-bold text-2xl text-white mb-[10px];
@@ -212,7 +216,7 @@
 			}
 
 			.technologies {
-				@apply relative pb-[15px];
+				@apply relative pb-[15px] mb-[60px];
 				.techHead {
 					background-image: url(./images/technologies/techBg.png);
 					@apply z-20 w-[1278px] h-[303px] rounded-[200px] bg-black flex flex-col items-center pt-[108px] mb-[60px];
@@ -223,7 +227,7 @@
 						@apply mb-[46px];
 					}
 					button {
-						@apply p-[5px]  bg-clip-padding border-[#0E0E0E]/30 border-[15px] rounded-full;
+						@apply p-[5px] border-[#0E0E0E]/30 border-[15px] rounded-full;
 						img {
 							@apply w-[60px];
 						}
@@ -250,13 +254,162 @@
 			}
 
 			.howTo {
+				.howToTitleDiscription {
+					@apply flex items-center mb-[124px];
+					.howToTitle {
+						@apply relative w-[557px] mr-[55px];
+						.firstH2 {
+							@apply mb-[15px];
+						}
+						.secondH2 {
+						}
+						.howToArrow {
+							@apply absolute top-[30px] left-[335px];
+						}
+					}
+					.howToDiscription {
+						@apply w-[652px];
+						.text {
+						}
+					}
+				}
+				.howToList {
+					@apply flex justify-around relative mb-[112px];
+					.howToVector {
+						@apply absolute scale-110 top-[-5px];
+					}
+					li {
+						@apply z-20;
+						button {
+							@apply w-[179px] h-[179px] text-[67px] rounded-full border-[#0E0E0E]/30 border-[20px] mb-[20px];
+						}
+						.arrowH3 {
+							@apply flex relative;
+							img {
+								@apply w-[67px] absolute top-[-17px];
+							}
+						}
+						.arrowH3.one {
+							img {
+								@apply left-[-50px];
+							}
+							h3 {
+								@apply w-[187px] ml-[15px];
+							}
+						}
+						.arrowH3.two {
+							img {
+								@apply left-[-30px];
+							}
+							h3 {
+								@apply w-[140px] ml-[35px];
+							}
+						}
+						.arrowH3.three {
+							img {
+								@apply left-[-35px];
+							}
+							h3 {
+								@apply w-[157px] ml-[30px];
+							}
+						}
+						.arrowH3.four {
+							img {
+								@apply left-[-30px];
+							}
+							h3 {
+								@apply w-[117px] ml-[35px];
+							}
+						}
+					}
+				}
 			}
 
 			.join {
+				@apply flex flex-col items-center pt-[90px] pb-[84px] px-[110px] rounded-[100px] shadow px-[110px] mb-[122.5px];
+				background: radial-gradient(#403a5f, 20%, #1e1b2b);
+				img {
+					@apply mt-[25px] mb-[21px];
+				}
+				form {
+					@apply flex flex-col items-center mt-[65px];
+					input,
+					textarea {
+						@apply bg-white/0 pt-[27px] pb-[26px] px-[42px] border-[2px] border-white rounded-[40px] mb-[21px] outline-none;
+					}
+					textarea {
+						@apply w-[1058px] h-[210px] resize-none;
+					}
+					input.button {
+						@apply w-[214px] h-[48px] px-[55px] pb-[17px] pt-[16px] border-0;
+					}
+					.forms {
+						@apply grid grid-cols-2 gap-3 w-[1055px];
+					}
+				}
 			}
 		}
 
 		footer {
+			@apply text-white font-bold;
+			.topFooter {
+				@apply text-base  flex mb-[70px];
+				.logo {
+					img {
+						@apply w-[185px] h-[187px] mr-[100px];
+					}
+				}
+				.verLine {
+					@apply h-[196px];
+				}
+				li {
+					@apply mb-5;
+				}
+				.footerNav {
+					@apply ml-[81px] mr-[104px];
+					ul {
+						li {
+							a {
+							}
+						}
+					}
+				}
+				.links {
+					@apply ml-[107px] mr-[69px];
+					ul {
+						li {
+							a {
+							}
+						}
+					}
+				}
+				.socialLinks {
+					@apply ml-[71px];
+
+					p {
+						@apply mb-[39px];
+					}
+					.href {
+						@apply flex mb-[49px];
+						a {
+							@apply mr-[20px];
+							img {
+							}
+						}
+					}
+					button {
+						@apply pt-[17px] pb-[16px] pl-[38px] pr-[43px];
+					}
+				}
+			}
+			.horizontLine {
+				@apply mb-[49px];
+			}
+			.bottomFooter {
+				.footerText {
+					@apply text-center;
+				}
+			}
 		}
 	}
 }

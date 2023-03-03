@@ -26,6 +26,20 @@ import unreal from './images/technologies/unreal.png'
 import unity from './images/technologies/unity.png'
 import oculus from './images/technologies/oculus.png'
 import vive from './images/technologies/vive.png'
+import howToArrow from './images/howTo/howToArrow.png'
+import howToVector from './images/howTo/howToVector.png'
+import line from './images/join/line.png'
+import footerLogo from './images/footer/logo.png'
+import facebook from './images/footer/facebook.png'
+import twitter from './images/footer/twitter.png'
+import linkedin from './images/footer/linkedin.png'
+import youtube from './images/footer/youtube.png'
+import instagram from './images/footer/instagram.png'
+import pinterest from './images/footer/pinterest.png'
+import verLine from './images/footer/verLine.png'
+import horizontLine from './images/footer/horizontLine.png'
+import footerVector1 from './images/footer/footerVector1.png'
+import footerVector2 from './images/footer/footerVector2.png'
 
 function App() {
 	return (
@@ -231,14 +245,160 @@ function App() {
 							</li>
 						</ul>
 					</div>
-					<div className='howTo'></div>
-					<div className='join'></div>
+					<div className='howTo'>
+						<div className='howToTitleDiscription'>
+							<div className='howToTitle'>
+								<h2 className='firstH2'>HOW WE BUILD</h2>
+								<h2 className='secondH2'>WITH HYDRA VR?</h2>
+								<img className='howToArrow' src={aboutArrow} alt='' />
+							</div>
+							<div className='howToDiscription'>
+								<p className='text'>
+									Vitae sapien pellentesque habitant morbi tristique senectus et
+									netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
+									lectus. Mi sit amet mauris commodo quis imperdiet massa
+									tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+									lectus sit amet est placerat in. Lectus magna fringilla urna
+									porttitor rhoncus vitae.
+								</p>
+							</div>
+						</div>
+						<ul className='howToList'>
+							<img className='howToVector' src={howToVector} alt='' />
+							<li>
+								<button>01</button>
+								<div className='arrowH3 one'>
+									<img src={howToArrow} alt='' />
+									<h3>3D Conception & Design</h3>
+								</div>
+							</li>
+							<li>
+								<button>02</button>
+								<div className='arrowH3 two'>
+									<img src={howToArrow} alt='' />
+									<h3>Interaction Design</h3>
+								</div>
+							</li>
+							<li>
+								<button>03</button>
+								<div className='arrowH3 three'>
+									<img src={howToArrow} alt='' />
+									<h3>VR World User Testing</h3>
+								</div>
+							</li>
+							<li>
+								<button>04</button>
+								<div className='arrowH3 four'>
+									<img src={howToArrow} alt='' />
+									<h3>Hydra VR Deploy</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div className='join'>
+						<h2 className='firstH2'>JOIN HYDRA</h2>
+						<img src={line} alt='' />
+						<h2 className='secondH2'>Let's Build Your VR Experience</h2>
+						<form action='' className='text14'>
+							<div className='forms'>
+								<input type='text' name='name' placeholder='First Name' />
+								<input type='text' name='surname' placeholder='Last Name' />
+								<input type='text' name='mail' placeholder='Email' />
+								<input type='text' name='number' placeholder='Phone Number' />
+								<input
+									type='text'
+									name='subject'
+									placeholder='Subject'
+									className='col-span-2'
+								/>
+								<textarea
+									name=''
+									id=''
+									cols='30'
+									rows='10'
+									placeholder='Telll Us Something...'
+									className='col-span-2'
+								></textarea>
+							</div>
+							<input className='button' type='submit' value='SEND TO HYDRA' />
+						</form>
+					</div>
 				</main>
 				<footer>
-					<div className='logo'></div>
-					<nav className='footerNav'></nav>
-					<div className='links'></div>
-					<div className='socialLinks'></div>
+					<div className='topFooter'>
+						<div className='logo'>
+							<img src={footerLogo} alt='logo' />
+						</div>
+						<img className='verLine' src={verLine} alt='' />
+						<nav className='footerNav'>
+							<ul>
+								<li>
+									<a href=''>ABOUT</a>
+								</li>
+								<li>
+									<a href=''>SERVICES</a>
+								</li>
+								<li>
+									<a href=''>TECHNOLOGIES</a>
+								</li>
+								<li>
+									<a href=''>HOW TO</a>
+								</li>
+								<li>
+									<a href=''>JOIN HYDRA</a>
+								</li>
+							</ul>
+						</nav>
+						<img className='verLine' src={verLine} alt='' />
+						<div className='links'>
+							<ul>
+								<li>
+									<a href=''>F.A.Q</a>
+								</li>
+								<li>
+									<a href=''>SITEMAP</a>
+								</li>
+								<li>
+									<a href=''>CONDITIONS</a>
+								</li>
+								<li>
+									<a href=''>LICENSES</a>
+								</li>
+							</ul>
+						</div>
+						<img className='verLine' src={verLine} alt='' />
+						<div className='socialLinks'>
+							<p>SOCIALIZE WITH HYDRA</p>
+							<div className='href'>
+								<a href=''>
+									<img src={facebook} alt='fb' />
+								</a>
+								<a href=''>
+									<img src={twitter} alt='tw' />
+								</a>
+								<a href=''>
+									<img src={linkedin} alt='in' />
+								</a>
+								<a href=''>
+									<img src={youtube} alt='utube' />
+								</a>
+								<a href=''>
+									<img src={instagram} alt='inst' />
+								</a>
+								<a href=''>
+									<img src={pinterest} alt='pint' />
+								</a>
+							</div>
+							<button>BUILD YOUR WORLD</button>
+						</div>
+					</div>
+					<img src={horizontLine} alt='' className='horizontLine' />
+					<div className='bottomFooter'>
+						<p className='footerText'>
+							2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS
+							RESERVED
+						</p>
+					</div>
 				</footer>
 			</div>
 		</div>
