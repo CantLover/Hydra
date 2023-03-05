@@ -1,0 +1,18 @@
+.menu {
+	@apply z-30 fixed left-0 top-0 w-full h-full bg-[#211e2e] opacity-[98%] p-8 translate-x-[100%] transition-all;
+	.menuContent {
+		@apply w-full h-full flex items-center justify-center;
+		.menuClose {
+			@apply absolute right-14 top-14;
+		}
+		.menuItems {
+			@apply grid place-items-center gap-12;
+			a {
+				@apply block text-4xl font-light hover:brightness-100 after:scale-0 after:transition-all after:hover:scale-100 after:content-[''] after:w-full after:h-[2px] after:absolute after:bottom-[-10px] after:bg-white after:left-0;
+			}
+		}
+	}
+}
+.menu.open {
+	@apply translate-x-0;
+}

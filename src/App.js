@@ -40,8 +40,12 @@ import verLine from './images/footer/verLine.png'
 import horizontLine from './images/footer/horizontLine.png'
 import footerVector1 from './images/footer/footerVector1.png'
 import footerVector2 from './images/footer/footerVector2.png'
+import menuIcon from './images/header/menu.png'
+import Menu from './Menu/Menu'
+import { useState } from 'react'
 
 function App() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	return (
 		<div className='App'>
 			<div className='appWrapper'>
@@ -51,15 +55,22 @@ function App() {
 						<img className='logoText' src={logoText} alt='logoText' />
 					</div>
 					<nav className='headerNav'>
-						<a href='#'>about</a>
-						<a href='#'>services</a>
-						<a href='#'>technologies</a>
-						<a href='#'>how to</a>
+						<a href='#about'>about</a>
+						<a href='#services'>services</a>
+						<a href='#tech'>technologies</a>
+						<a href='#howTo'>how to</a>
 					</nav>
 					<div className='buttons'>
 						<button>contact us</button>
 						<button>join hydra</button>
 					</div>
+					<img
+						src={menuIcon}
+						alt=''
+						className='menuIcon'
+						onClick={() => setIsMenuOpen(true)}
+					/>
+					<Menu isMenuOpen={isMenuOpen} onChange={setIsMenuOpen}></Menu>
 				</header>
 				<main>
 					<div className='home'>
@@ -117,7 +128,7 @@ function App() {
 						</div>
 					</div>
 
-					<div className='about'>
+					<div className='about' id='about'>
 						<img className='aboutVector1' src={aboutVector1} alt='' />
 						<img className='aboutVector2' src={aboutVector2} alt='' />
 						<div className='firstTitle'>
@@ -159,7 +170,7 @@ function App() {
 							<button>LET’S GET IN TOUCH</button>
 						</div>
 					</div>
-					<div className='services'>
+					<div className='services' id='services'>
 						<div className='servicesTitleDiscription'>
 							<div className='servicesTitle'>
 								<h2 className='firstH2'>WHY BUILD</h2>
@@ -172,8 +183,7 @@ function App() {
 									netus et. Feugiat nibh sed pulvinar proin gravida hendrerit
 									lectus. Mi sit amet mauris commodo quis imperdiet massa
 									tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-									lectus sit amet est placerat in. Lectus magna fringilla urna
-									porttitor rhoncus vitae.
+									lectus sit amet est placerat in. Lectus magna fringilla urna.
 								</p>
 							</div>
 						</div>
@@ -222,7 +232,7 @@ function App() {
 						<img className='servicesVector' src={servicesVector} alt='' />
 					</div>
 
-					<div className='technologies'>
+					<div className='technologies' id='tech'>
 						<div className='techHead'>
 							<h2 className='firstH2'>TECHNOLOGIES & HARDWARE</h2>
 							<h2 className='secondH2'>USED BY HYDRA VR.</h2>
@@ -245,7 +255,7 @@ function App() {
 							</li>
 						</ul>
 					</div>
-					<div className='howTo'>
+					<div className='howTo' id='howTo'>
 						<div className='howToTitleDiscription'>
 							<div className='howToTitle'>
 								<h2 className='firstH2'>HOW WE BUILD</h2>
@@ -295,7 +305,7 @@ function App() {
 							</li>
 						</ul>
 					</div>
-					<div className='join'>
+					<div className='join' id='form'>
 						<h2 className='firstH2'>JOIN HYDRA</h2>
 						<img src={line} alt='' />
 						<h2 className='secondH2'>Let's Build Your VR Experience</h2>
@@ -333,19 +343,19 @@ function App() {
 						<nav className='footerNav'>
 							<ul>
 								<li>
-									<a href=''>ABOUT</a>
+									<a href='#about'>ABOUT</a>
 								</li>
 								<li>
-									<a href=''>SERVICES</a>
+									<a href='#services'>SERVICES</a>
 								</li>
 								<li>
-									<a href=''>TECHNOLOGIES</a>
+									<a href='#tech'>TECHNOLOGIES</a>
 								</li>
 								<li>
-									<a href=''>HOW TO</a>
+									<a href='#howTo'>HOW TO</a>
 								</li>
 								<li>
-									<a href=''>JOIN HYDRA</a>
+									<a href='#form'>JOIN HYDRA</a>
 								</li>
 							</ul>
 						</nav>
@@ -399,6 +409,8 @@ function App() {
 							RESERVED
 						</p>
 					</div>
+					<img className='footerVector1' src={footerVector1} alt='' />
+					<img className='footerVector2' src={footerVector2} alt='' />
 				</footer>
 			</div>
 		</div>
